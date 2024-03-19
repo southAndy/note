@@ -5,7 +5,6 @@
 1. <a href="#jsx">認識 JSX</a>
 2. <a href="#使用事件">在 react 中如何使用事件(event)</a>
 3. <a href="#react-中最基本的單位---元件">react 中最基本的單位 - 元件</a>
-4. <a href="#介紹-react-中的狀態-state">介紹 react 中的狀態 (state)</a>
 
 ### JSX
 
@@ -90,9 +89,3 @@ function Button() {
 }
 export default Button;
 ```
-
-這樣就產生了一個按鈕元件。
-
----
-
-### 參考資料
