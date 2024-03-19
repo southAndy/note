@@ -68,10 +68,10 @@ const config = {
       navbar: {
         title: "Andy Walking",
         //todo add logo
-        // logo: {
-        //   alt: "My Site Logo",
-        //   src: "img/logo.svg",
-        // },
+        logo: {
+          alt: "My Site Logo",
+          src: "img/logo.svg",
+        },
         items: [
           {
             type: "docSidebar",
