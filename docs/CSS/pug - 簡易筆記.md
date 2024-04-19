@@ -94,7 +94,7 @@ mixin List
 ```html
 <ul>
   <li></li>
-  <li></li>
+  <li>23</li>
   <li></li>
 </ul>
 <ul>
