@@ -13,7 +13,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Andy Walking",
   // tagline: "Dinosaurs are cool",
-  // favicon: "img/favicon.ico",
+  // favicon: "img/favicon.ico", 
 
   // Set the production url of your site here
   url: "https://your-docusaurus-site.example.com",
@@ -93,15 +93,15 @@ const config = {
       footer: {
         style: "dark",
         links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
+          // {
+          //   title: "Docs",
+          //   items: [
+          //     {
+          //       label: "Tutorial",
+          //       to: "/docs/intro",
+          //     },
+          //   ],
+          // },
           {
             title: "Community",
             items: [
@@ -122,10 +122,10 @@ const config = {
           {
             title: "More",
             items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
+              // {
+              //   label: "Blog",
+              //   to: "/blog",
+              // },
               {
                 label: "GitHub",
                 href: "https://github.com/facebook/docusaurus",
