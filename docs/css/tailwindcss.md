@@ -1,6 +1,6 @@
 #tailwindcss
 
-### Start to use TailwindCSS
+### 新增 tailwindcss 至專案內
 
 官方文件提供了四種方式，以下會搭配 postCSS 來運行
 
@@ -67,26 +67,6 @@ module.exports = {
 <!-- border-radious -->
 <div class="rounded" ></div>
 ```
----
-
-### 客製化樣式、數值
-
-If you need to add `borderColor` setting in  `tailwind.config.js`
-```js
-module.exports = {
- content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"], 
- theme: {
-	 extend: {},
-	 borderColor:{
-		 '[colorName]':'[colorName]'
-	 }
- },
- plugins: [],
-};
-```
-
-### 如何加入斷點設定？
-https://tailwindcss.com/docs/screens
 
 ---
 
