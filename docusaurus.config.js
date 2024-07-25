@@ -6,6 +6,9 @@
 
 import { themes as prismThemes } from "prism-react-renderer";
 
+//TODO: modify page's font-size
+
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Andy Walking",
@@ -132,9 +135,10 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
+      // code block theme
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: prismThemes.dracula, // lightTheme's setting
+        darkTheme: prismThemes.dracula, // darkTheme's setting
       },
     }),
 };

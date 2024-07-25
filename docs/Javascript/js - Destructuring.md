@@ -1,4 +1,3 @@
-  #js 
 
 ### 前言
 
@@ -9,10 +8,11 @@
 
 兩者差異與限制會於下方說明
 
+---
 
 ### 陣列解構
 
-只要符合 *iterable protocol* 的內容，都可以使用陣列解構
+只要符合 [iterable protocol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) 的內容，都可以使用陣列解構
 
 string
 
@@ -29,7 +29,7 @@ Map
 const x = new Map([1,2])
 const [a,b] = x
 
-console.log(a,b)
+console.log(a,b) //1,2
 ```
 
 
@@ -58,10 +58,11 @@ const [a,...b] = [1,2,3,4,5,6]
 console.log(a,b)
 ```
 
+---
 
 ### 物件解構
 
-最基本可以理解是取出物件 key 的值，所以解構名稱要與 key 相同 
+最基本可以理解是取出物件 key 的值，但解構名稱要與 key 相同 
 
 ```js
 const obj = {a:1,b:2}
@@ -94,8 +95,9 @@ function getNewName({userName:newName}){
 	return newName
 }
 ```
+---
 
-### 不可解構
+### 不可解構型別與用法
 
 ```js
 const {a} = 1 //undefined
@@ -105,6 +107,7 @@ const {a} = null //error
 const [a] = {a:1} //error 
 ```
 
+---
 
 ### 實際應用
 
