@@ -87,8 +87,6 @@ app.use("/user", [checkPerson, checkPassword, getID]);
 
 > 注意：會依照陣列索引值順序來執行
 
-### middleware
-
 ---
 
 ### 參考資料：
