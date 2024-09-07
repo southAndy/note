@@ -6,14 +6,13 @@
 
 import { themes as prismThemes } from "prism-react-renderer";
 
-//TODO: modify page's font-size
 
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Andy Walking",
   // tagline: "Dinosaurs are cool",
-  // favicon: "img/favicon.ico", 
+  favicon: "img/andy-walking-logo.svg", 
 
   // Set the production url of your site here
   url: "https://southandy.github.io",
@@ -31,10 +30,10 @@ const config = {
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: "zh-Hans",
-    locales: ["zh-Hans", "en"],
-  },
+  // i18n: {
+  //   defaultLocale: "zh-Hans",
+  //   locales: ["zh-Hans", "en"],
+  // },
 
   presets: [
     [
@@ -59,13 +58,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/andy-walking-logo.svg",
       navbar: {
         title: "Andy Walking",
-        //todo add logo
         logo: {
           alt: "My Site Logo",
-          src: "img/logo.svg",
+          src: "img/andy-walking-logo.svg",
         },
         items: [
           {
@@ -74,18 +72,21 @@ const config = {
             position: "left",
             label: "Tech Notes",
           },
-          // { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/southAndy",
             label: "GitHub",
             position: "right",
           },
+          {
+            href:'https://www.linkedin.com/in/yi-yang-t-2124491a2/',
+            label:'Linkedin',
+            position:'right'
+          }
         ],
       },
       footer: {
-        style: "dark",
-        links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        style: "light",
+        copyright: `Copyright © ${new Date().getFullYear()}, Inc. Built with Docusaurus.`,
       },
       // code block theme
       prism: {
