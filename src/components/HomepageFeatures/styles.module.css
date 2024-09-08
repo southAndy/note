@@ -9,3 +9,13 @@
   height: 200px;
   width: 200px;
 }
+
+.container{
+  text-align: center;
+  margin: 0 auto;
+}
+.intro{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}

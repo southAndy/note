@@ -58,13 +58,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/andy-walking-logo.svg",
+      // image: "img/andy-walking-logo.svg",
       navbar: {
         title: "Andy Walking",
-        logo: {
-          alt: "My Site Logo",
-          src: "img/andy-walking-logo.svg",
-        },
+        // logo: {
+        //   alt: "My Site Logo",
+        //   src: "img/andy-walking-logo.svg",
+        // },
         items: [
           {
             type: "docSidebar",
