@@ -12,7 +12,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className={styles.container}>
-        <img src="/img/my-photo.png"/>
+        <img src="/note/img/my-photo.png" className={styles.photo}/>
         <div></div>
         <div className={styles.intro}>
           <p>Andy 曾翊洋 | Frontend engineer</p>

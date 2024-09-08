@@ -17,5 +17,14 @@
 .intro{
   display: flex;
   flex-direction: column;
+  text-align: start;
   max-width: 500px;
+}
+.photo{
+  border-radius: 110%;
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
+  margin-bottom: 30px;
 }
