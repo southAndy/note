@@ -17,6 +17,12 @@
   text-align: center;
   margin: 0 auto;
 }
+.social{
+  display: flex;
+  align-items: center;
+  gap:8px;
+  margin-bottom: 20px;
+}
 .intro{
   display: flex;
   flex-direction: column;

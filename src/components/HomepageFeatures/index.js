@@ -14,7 +14,14 @@ export default function HomepageFeatures() {
       <div className='container'>
         <div className={styles.container}>
           <img src="/note/img/my-photo.png" className={styles.photo}/>
-          <div></div>
+          <div className={styles.social}>
+            <a href="https://github.com/southAndy" target="blank">
+              <i class="fa-brands fa-github fa-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yi-yang-t-2124491a2/" target="blank">
+              <i class="fa-brands fa-linkedin fa-lg"></i>
+            </a>
+          </div>
           <div className={styles.intro}>
             <p>Andy 曾翊洋 | Frontend engineer</p>
             {/* <a>2024/4 - 2024/9 擔任前端工程師 於數字科技</a> */}

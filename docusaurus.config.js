@@ -34,7 +34,12 @@ const config = {
   //   defaultLocale: "zh-Hans",
   //   locales: ["zh-Hans", "en"],
   // },
+  scripts:[
+    {
+      src:'https://kit.fontawesome.com/acf9539b1e.js'
 
+    },
+  ],
   presets: [
     [
       "classic",
@@ -85,7 +90,7 @@ const config = {
         ],
       },
       footer: {
-        style: "light",
+        style: "dark",
         copyright: `Copyright © ${new Date().getFullYear()}, Inc. Built with Docusaurus.`,
       },
       // code block theme
