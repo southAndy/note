@@ -17,6 +17,11 @@
   text-align: center;
   margin: 0 auto;
 }
+
+.container p {
+  font-size: 16px;
+}
+
 .social{
   display: flex;
   align-items: center;
