@@ -95,8 +95,8 @@ const config = {
       },
       // code block theme
       prism: {
-        theme: prismThemes.dracula, // lightTheme's setting
-        darkTheme: prismThemes.dracula, // darkTheme's setting
+        theme: prismThemes.duotoneLight, // lightTheme's setting
+        darkTheme: prismThemes.duotoneDark, // darkTheme's setting
       },
       editCurrentVersion:false
     }),
