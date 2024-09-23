@@ -1,6 +1,5 @@
 # [Nodejs] Expressjs basic
 
-## Express 實例方法
 
 ### 自動讀取靜態資源
 
@@ -8,7 +7,6 @@
 app.use(express.static("public"));
 ```
 
-## 基本操作
 
 ### 建立伺服器
 
