@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">[JS] 比較 var, let, const | Andy Walking</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://southandy.github.io/note/docs/Javascript/variable-declare"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="[JS] 比較 var, let, const | Andy Walking"><meta data-rh="true" name="description" content="建議先閱讀 Scoped 章節再閱讀本篇文章"><meta data-rh="true" property="og:description" content="建議先閱讀 Scoped 章節再閱讀本篇文章"><link data-rh="true" rel="icon" href="/note/img/andy-walking-logo.svg"><link data-rh="true" rel="canonical" href="https://southandy.github.io/note/docs/Javascript/variable-declare"><link data-rh="true" rel="alternate" href="https://southandy.github.io/note/docs/Javascript/variable-declare" hreflang="en"><link data-rh="true" rel="alternate" href="https://southandy.github.io/note/docs/Javascript/variable-declare" hreflang="x-default"><script src="https://kit.fontawesome.com/acf9539b1e.js"></script><link rel="stylesheet" href="/note/assets/css/styles.ddda8911.css">
-<script src="/note/assets/js/runtime~main.a370b2a7.js" defer="defer"></script>
+<script src="/note/assets/js/runtime~main.4f1627ba.js" defer="defer"></script>
 <script src="/note/assets/js/main.5943cce5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -34,7 +34,7 @@
 <p>除了用來避免被宣告前被使用外，Explain this 的 <a href="https://www.explainthis.io/zh-hant/swe/hoisting" target="_blank" rel="noopener noreferrer">什麼是提升 (Hoisting)？</a> 這篇文內提到
 You don&#x27;t know JS 的作者給出了另一個很好的解釋：</p>
 <blockquote>
-<p>TDZ 錯誤其實是為了 const 所設計的。試想一下，如果 const 的提升行為與 var 相同，因此我們在宣告前訪問到 const 變量時，會拿到 undefined 的值，但我們也知道 const 是常數，同個作用域中值不應該變動，因此如果先拿到 undefined 後再拿到不同值的設計會不符合規範。因此設計了暫時死區的錯誤，避免這種情況發生。</p>
+<p>TDZ 錯誤其實是為了 <code>const</code> 所設計的。試想一下，如果 <code>const</code> 的提升行為與 <code>var</code> 相同，因此我們在宣告前訪問到 <code>const</code> 變量時，會拿到 <code>undefined</code> 的值，但我們也知道 <code>const</code> 是常數，同個作用域中值不應該變動，因此如果先拿到 <code>undefined</code> 後再拿到不同值的設計會不符合規範。因此設計了暫時死區的錯誤，避免這種情況發生。</p>
 </blockquote>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="觀念測試">觀念測試<a class="hash-link" aria-label="Direct link to 觀念測試" title="Direct link to 觀念測試" href="/note/docs/Javascript/variable-declare#觀念測試">​</a></h3>
 <p>下面呼叫 <code>test</code> 函式，會輸出什麼？</p>
