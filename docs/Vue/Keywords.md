@@ -1,12 +1,10 @@
-# Vue keywords
+# [Vue] keywords
 
 :::info
 這邊以 Vue 3 為主， Vue 2 的寫法會有不同，請參考 Vue 2 的文件。
 :::
 
-### 關於 computed
-
-**computed vs methods**
+### computed vs methods
 
 假設今天有兩個 state `firstName` 和 `lastName`，想計算出 `fullName`，以這個情境來說，不論是 `computed` 或是 `methods` 都可以實作，那麼要怎麼決定使用哪個？
 
@@ -32,7 +30,7 @@ function getFullName() {
 所以簡單來說，你的功能會牽涉到上述的內容，就不該使用 `computed`。
 
 
-**writable computed**
+### writable computed
 
 `computed` 預設是唯讀的
 
@@ -94,7 +92,7 @@ watch([count, doubleCount], (oldCount,newCount) => {
 1. `immediate: true`：是否要立即執行（預設是 false）
 2. `deep: true`：是否要監聽深層的 reactive 物件
 3. `flush: 'post'`：是否要監聽多個 dependencies
-4. `once:true` :此 watch 是否只執行一次 (v3.4 以上)
+4. `once:true` :此 watch 是否只執行一次 (3.4 以上)
 
 ```js
 watch(count, (newVal, oldVal) => {
