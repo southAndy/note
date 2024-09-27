@@ -15,8 +15,8 @@ const config = {
   favicon: "img/andy-walking-logo.svg", 
 
   // Set the production url of your site here
-  url: "https://southandy.github.io",
-  baseUrl: "/note/",
+  url: "https://www.andy-walking.dev/",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
