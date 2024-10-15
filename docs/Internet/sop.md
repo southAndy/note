@@ -4,7 +4,7 @@
 
 
 
-1. scheme ：是通訊協定：`http / https`，指被請求來源（`response`）與請求來源（`request`）需使用相同的通訊協定 
+1. protocol ：是通訊協定：`http / https`，指被請求來源（`response`）與請求來源（`request`）需使用相同的通訊協定 
 2. host：則是網域，指被請求來源（`response`）與請求來源（`request`）的網域相同 
 3. port：是通訊埠，指被請求來源（`response`）與請求來源（`request`）相同
 
