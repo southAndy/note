@@ -55,6 +55,10 @@ p,li{
   
 }
 
+blockquote{
+  font-size: 10px;
+}
+
 
 code {
   color:#49C6E5;

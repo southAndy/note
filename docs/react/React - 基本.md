@@ -39,6 +39,19 @@ let type = "text";
 const inputTag = <input type={type} />;
 ```
 
+當元件有多個根元素時，則建議使用 react 提供的 fragment `<></>` 來包覆架構
+
+```js
+const Button = () =>{
+  return (
+    <>
+      <div></div>
+      <div></div>
+    </>
+  )
+}
+```
+
 ---
 
 ### 使用事件
