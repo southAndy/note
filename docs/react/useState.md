@@ -119,7 +119,7 @@ const [state,setState] = useState({x:1,y:2})
 setState({x:2,y:3})
 ```
 
-上面都是單層物件資料，如果今天是巢狀(nested)的狀態（如下），可以這樣思考去拆解
+上面都是單層物件資料，如果今天是巢狀（nested）的狀態（如下），可以這樣思考去拆解
 
 ```jsx
 export default function nestObj(){
@@ -131,7 +131,7 @@ export default function nestObj(){
 
 ```
 
-1. 把 `interest` 先單獨拉出來
+1. 把 `interest` 物件先單獨拉出來
 ```jsx
 const newInterest = {...obj.interest}
 newInterest.ball = 'baseball'
@@ -141,7 +141,75 @@ newInterest.ball = 'baseball'
 ```jsx
 setObj({...obj,interest:newInterest})
 ```
-所以其實就是單層的作法做兩次。
+所以其實就是單層的更新方法做兩次。
+
+#### 陣列型別更新
+
+陣列如同物件是 mutable 的，且許多內建的陣列方法會修改原始陣列造成 mutable ，這邊我擷取了 react 官方文件內條列的比較表（如下），透過這張表可以快速知道，要避免直接使用哪些方法更新 state 。
+
+![](/img/usestate/array.png)
+
+> 圖片來源：https://react.dev/learn/updating-arrays-in-state
+
+**加入新的資料**
+
+一般來說，可以使用 `push` (新增資料到最後一筆)、`unshift` (新增資料到第一筆)，但這兩種都是 mutable 的方法，這邊同樣可使用離散語法替代
+
+```jsx
+const [state,setState] = useState([x,y,z])
+//把新資料放到最後一筆
+seState([...state,newData])
+//把新資料放在第一筆
+setState([newData,...state])
+```
+
+**將資料加入陣列中的特定位置**
+
+使用離散語法搭配 `slice` 就能實現
+
+```jsx
+setState(...state.slice(0,1),newData)
+```
+:::tip
+`slice(a,b)` 的兩個參數分別是指 a:從陣列中第幾個索引值開始  b:到哪個索引值停下（但不包含那個索引值）
+:::
+
+**如何使用 mutable 方法**
+
+其實上述圖表會造成 mutable 的方法，在 react 並不是不能使用，先釐清使用它們會產生的問題是 **"影響本來的陣列"**，所以只要能避免這個情況，其實還是能使用的。
+
+要不影響本來的陣列，常見的方法就是複製陣列，我們可透過離散語法完成這件事。
+
+```jsx
+const [state,setState] = useState([1,2,3,4])
+
+//離散複製一個
+const sepArray = [...state]
+
+//這時使用 mutable 的方法（反轉、排序）也沒差，因為 mutable 影響的也不是 state 
+const versedArray = sepArray.reverse()
+const sortedArray = sepArray.sort()
+
+```
+但今天陣列內的資料若是 *reference types* 的 （如物件、陣列），即便複製了陣列仍會觸發 mutable 的問題，原因是離散語法是所謂的 [shadow copy (淺拷貝)](https://www.explainthis.io/zh-hant/swe/shallow-copy-and-deep-copy)，資料架構（如下）內部的物件其實沒有被複製到，仍然指向本來的位置。
+
+```jsx
+const [state,setState] = useState([{name:"andy"}])
+
+//只有複製外層陣列，內部物件還是指向相同記憶體
+const copyState = [...state]
+copyState[0].name = "danny" // 產生 mutable 問題 
+```
+所以遇到這樣的資料類型，你會同時需要產生新的陣列及物件，官方文件的範例是使用用 `map` 搭配離散語法：
+
+`map` 用來產生新的陣列，離散語法淺拷貝裡面的物件資料。
+
+```jsx
+const [state,setState] = useState([{name:"andy"}])
+const copyState = state.map((data)=>{return {...data}})
+
+copyState[0].name = 'danny' // ok!
+```
 
 
 ## 狀態更新機制
