@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">[筆記] 重構 vue project | Andy Walking</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://www.andy-walking.dev/docs/Vue/refactor"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="[筆記] 重構 vue project | Andy Walking"><meta data-rh="true" name="description" content="為何要重構？"><meta data-rh="true" property="og:description" content="為何要重構？"><link data-rh="true" rel="icon" href="/img/andy-walking-logo.svg"><link data-rh="true" rel="canonical" href="https://www.andy-walking.dev/docs/Vue/refactor"><link data-rh="true" rel="alternate" href="https://www.andy-walking.dev/docs/Vue/refactor" hreflang="en"><link data-rh="true" rel="alternate" href="https://www.andy-walking.dev/docs/Vue/refactor" hreflang="x-default"><script src="https://kit.fontawesome.com/acf9539b1e.js"></script><link rel="stylesheet" href="/assets/css/styles.ce140056.css">
-<script src="/assets/js/runtime~main.2168508c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.84c8ee81.js" defer="defer"></script>
 <script src="/assets/js/main.b992f5d9.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -19,14 +19,15 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="重構方式">重構方式<a class="hash-link" aria-label="Direct link to 重構方式" title="Direct link to 重構方式" href="/docs/Vue/refactor#重構方式">​</a></h3>
 <p>我會附上重構前後程式碼進行比對，在重構的過程若有遇到值得複習、不清楚的概念會記錄下來，以下是主要步驟：</p>
 <ol>
-<li>圖解架構及各個架構的功能</li>
-<li>為重要功能加入單元測試(JEST + Vue Unit-Test)</li>
+<li><a href="/docs/Vue/refactor#%E5%9C%96%E8%A7%A3%E5%B0%88%E6%A1%88%E6%9E%B6%E6%A7%8B">圖解架構及各個架構的功能</a></li>
+<li><a href="/docs/Vue/clitovite">更新專案打包工具 webpack -&gt; vite</a></li>
+<li><a href="/docs/Vue/refactor#%E9%87%8D%E6%A7%8B%E5%89%8D%E5%8A%9F%E8%83%BD%E6%B8%AC%E8%A9%A6">為重要功能加入單元測試 (Vitest)</a></li>
 <li>以頁面為單位去針對程式碼進行重構（並且記錄下程式碼重構的原因）</li>
 <li>以 Typescript 進行編寫</li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="重構前功能測試">重構前功能測試<a class="hash-link" aria-label="Direct link to 重構前功能測試" title="Direct link to 重構前功能測試" href="/docs/Vue/refactor#重構前功能測試">​</a></h2>
-<p>重構最簡單可以理解是「<strong>不影響功能運行下調整優化程式碼</strong>」的行為，我們可以透過撰寫測試來確保功能運作，但一個專案內功能那麼多，全部都需要撰寫測試？</p>
-<p>以下是我得出需要測試的功能：</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="為何要撰寫單元測試">為何要撰寫單元測試<a class="hash-link" aria-label="Direct link to 為何要撰寫單元測試" title="Direct link to 為何要撰寫單元測試" href="/docs/Vue/refactor#為何要撰寫單元測試">​</a></h2>
+<p>重構最簡單可以理解是「<strong>不影響功能運行下調整優化程式碼</strong>」的行為，透過撰寫測試我們可以更加確保功能運作正常，但每個專案內都有許多功能，如何選擇測試功能也是一門學問。</p>
+<p>以下是我得出需要測試的重要功能：</p>
 <ol>
 <li><strong>高頻率使用/核心功能</strong>：所謂的核心功能可以是指「攸關網站營收」、「現在未來主要發展」的功能，像是以後台系統來說，排除 API 不正常的情境，搜尋、圖表顯示功能都是非常重要的，常見識別核心功能的方法可透過 Google Analysis, Meta Pixiel 埋點，來統計、追蹤使用者使用行為。</li>
 <li><strong>異常狀態處理</strong>：像是在 API 資料回來前要顯示的載入效果、或是載入失敗的錯誤畫面顯示，都可以算在這類。</li>
@@ -43,12 +44,12 @@
 </blockquote>
 <p>大致確認了沒有特別的理由後，就可以單純以程式面來比較，經過 research 加上自己開發經驗得出以下的結論：</p>
 <ol>
-<li>以 compositionAPI 開發，可以將同個功能的狀態與功能函式聚集，而 optionAPI 則因為架構規範無法做到這件事，隨著專案體積擴大，功 能維護的容易性越差越多，如同官方文件的比較圖</li>
+<li>以 compositionAPI 開發，可以將同個功能的狀態與功能函式聚集，而 optionAPI 則因為架構規範無法做到這件事，隨著專案體積擴大，功能維護的容易性越差越多，如同官方文件的比較圖</li>
 </ol>
 <p><img decoding="async" loading="lazy" src="https://vuejs.org/assets/composition-api-after.ZXskY_32.png" alt="" class="img_ev3q"></p>
 <ol start="2">
 <li>相關生態系與 Typescript 的支援程度，因為後續想以 typescript 進行改寫。</li>
 </ol>
-<p>綜合上述兩點，確認要翻寫。</p></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/Vue/clitovite"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Vue CLI to Vite</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/Webpack/手動打包vue專案認識webpack配置"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">手動打包vue專案認識webpack配置</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#為何要重構">為何要重構？</a><ul><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#重構方式">重構方式</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#重構前功能測試">重構前功能測試</a><ul><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#測試方法">測試方法</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#重構記錄">重構記錄</a><ul><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#圖解專案架構">圖解專案架構</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#是否全面改寫-compositionapi">是否全面改寫 compositionAPI?</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024, Inc. Built with Docusaurus.</div></div></div></footer></div>
+<p>綜合上述兩點，確認要翻寫。</p></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/Vue/clitovite"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Vue CLI to Vite</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/Webpack/手動打包vue專案認識webpack配置"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">手動打包vue專案認識webpack配置</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#為何要重構">為何要重構？</a><ul><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#重構方式">重構方式</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#為何要撰寫單元測試">為何要撰寫單元測試</a><ul><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#測試方法">測試方法</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#重構記錄">重構記錄</a><ul><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#圖解專案架構">圖解專案架構</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/Vue/refactor#是否全面改寫-compositionapi">是否全面改寫 compositionAPI?</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024, Inc. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>
