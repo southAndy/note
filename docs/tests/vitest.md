@@ -6,14 +6,12 @@
 2. 額外撰寫一個 `vitest.config.js`
 
 ```js
-//1.vite.config.js
+//撰寫於 vite.config.js
 export default {
-	//vitest 的配置寫在這
 	test:{
-		
+		//vitest 的配置撰寫位置		
 	}
 }
-
 ```
 
 > 官方是推薦統一撰寫在 `vite.config.js` 內，原因是 **要維護兩邊文件**
@@ -54,6 +52,9 @@ test('should become 3, when user clicks this button',()=>{
 	expect(wrapper.trigger('button')).toBe(3)
 })
 ```
+用 `it` 撰寫的測試，搭配 it Should 的命名風格，讀起來就有 它應該會 ... 語感，而用 `test` 撰寫的就比較單純是描述一個功能。
+
+
 
 ### 加入時間
 default: 5000 ms
@@ -110,6 +111,19 @@ it("should failure, but test contiued",()=>{
 	const x = 1
 	expect.soft(x).toBe(3) // failure ,but test will be continued
 	expect(x).toBe(2) //failure
+})
+```
+### 非同步行為同時觸發
+
+使用 `.concurrent()` 讓兩個非同步行為同時觸發
+```js
+import { describe, it } from 'vitest'
+
+// All tests within this suite will be started in parallel
+describe.concurrent('suite', () => {
+  it('concurrent test 1', async ({ expect }) => { /* ... */ })
+  it('concurrent test 2', async ({ expect }) => { /* ... */ })
+  it.concurrent('concurrent test 3', async ({ expect }) => { /* ... */ })
 })
 ```
 
@@ -227,19 +241,7 @@ test("test function's return",()=>{
 是否包含被測試的字串內容
 
 
-## 描述
-
-使用 `.concurrent()` 讓兩個非同步行為同時觸發
-```js
-import { describe, it } from 'vitest'
-
-// All tests within this suite will be started in parallel
-describe.concurrent('suite', () => {
-  it('concurrent test 1', async ({ expect }) => { /* ... */ })
-  it('concurrent test 2', async ({ expect }) => { /* ... */ })
-  it.concurrent('concurrent test 3', async ({ expect }) => { /* ... */ })
-})
-```
+## descirbe API
 
 
 ## mock
@@ -314,5 +316,8 @@ test("",async()=>{
 ```
 
 
-## 報告
+## report
+
+## coverage 
+
 ### 不適用情境
