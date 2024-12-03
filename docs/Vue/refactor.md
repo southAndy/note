@@ -31,13 +31,9 @@
 
 ## 測試方法
 
-主要會以 **單元** **快照** **整合** 三種測試為主，參考專案架構圖，我列出這個網站比較主要的功能如下：
+主要會以 **單元** **快照** **整合** 三種測試為主，其中單元測試會分別進行元件測試、功能測試。
 
 ### 單元測試
-
-1. API 呼叫: 主要著重在錯誤處理、邊境情境
-2. Vuex 相關:模擬功能，確保運作正常
-
 
 #### [功能] actions 模擬
 
@@ -59,18 +55,15 @@ actions:{
 1. 測試單一任務
 2. 隔絕依賴
 
-檢視 `getApi` 這個方法來說，它的功能就是負責完成上述兩件事，這時重新檢視單元測試「單一功能能運作」的概念，產生了疑惑「但這個函式實際做了很多事情，怎麼叫單一？」，所謂的單一功能，不代表只做一件事？
+檢視 `getApi` 這個方法來說，它的功能就是負責完成上述兩件事，這時重新檢視單元測試「單一功能能運作」的概念，產生了疑惑「但這個函式做了不只一件事情」，所謂的單一功能，並不代表只做一件事？
 
-自己的理解有點像是我們要燉牛肉，但其實過程要經過切肉、切菜、炒料，全部過程都有確實完成，才能順利完成燉牛肉。
+自己後來是用料理來思考，假設今天功能是要燉牛肉，過程你要先經過切肉、切菜、炒料等步驟，每個步驟都有確實完成，最後才能順利完成「燉牛肉」這個事情，把這個思考套用反推回去 `getApi`這個功能，呼叫 api 跟觸發 mutation 就像是這個功能的切菜、炒料，這些步驟沒確實完成，這個功能就無法順利執行。
 
-「隔絕依賴」的部分，以這個案例來說就是與外部有依賴的是「真實 API 請求及真實的 vuex」，所以：
+而「隔絕依賴」的部分，以這個案例來說就是與外部有依賴的是「真實 API 請求及真實的 vuex」：
 1. 避免請求真實 API : 因為牽涉到網路環境、以及資料庫等不可控因素
 2. 避免操作真實 vuex：可以避免副作用的產生，例如測試過程改到真正的狀態
 
-
-綜合上述，我們得知要做：
-1. 模擬 API 
-2. 模擬 mutations
+#### mock API
 
 透過 vitest 提供的 `vi` 可以實現模擬 API 後續行為，它可劫持透定路徑檔案內的函式，並可自定義回傳值、錯誤內容，以這個專案來說 API 呼叫的設定是統一放在 `/service/getApi.js` 
 
@@ -92,7 +85,7 @@ export default {
 	return touristAPI.get("/ScenicSpot?%24top=500&%24format=JSON");},
 }
 ```
-我們在測試檔案引入這個模組後，使用 `vi` 進行劫持，並透過 `mock` ,所謂的劫持，自己理解是 **呼叫目標函式時，會觸發額外的行為**，可以用 `Proxy` 的概念去理解。
+我們在測試檔案引入這個模組後，使用 `vi.mock()` 進行劫持 ,所謂的劫持是 **呼叫目標函式時，會觸發設定好的行為**，可以用 `Proxy` 的概念去理解。
 
 ```js
 //action.unit.test.js
@@ -107,7 +100,9 @@ vi.mock('/service/getApi.js',()=>{
 	}
 })
 ```
-接著模擬 mutation，首先要做 **產生假的 vuex 架構**，因為單元測試專注於 **單一功能的運行狀態**，要盡量隔絕外部依賴產生的影響，還有另外一點就是測試產生的副作用，在這邊之所以要使用模擬的 vuex，是避免操作真實 vuex ，對真實的 `state`。
+#### mock mutation
+
+單元測試專注於 單一功能的運行狀態，要盡量縮小測試範圍、隔絕外部依賴產生的影響，以這個案例來說，我們只關注「actions 的功能」，在這邊之所以要產生模擬的 vuex，是避免操作真實 vuex 對真實的 `state`產生影響，也就是避免測試產生的副作用。
 
 ```js
 // 創建模擬的 Vuex Store
@@ -143,15 +138,13 @@ describe("When dispatching actions: getScenicSpotAPI", () => {
     });
 });
 ```
-這樣就完成 actions 功能驗證了。
 
-
-
+#### [元件] Button
 
 
 ### 快照測試
 
-這是一個前端特有的測試方式，主要用來確認渲染狀態，透過比較前後的畫面架構來進行。要進行快照測試還需要額外引入 **可以模擬 DOM 架構** 的套件，這邊我是使用 *jsdom* ，引入後加入配置
+這是前端特有的測試方式，透過比較前後的畫面架構改變來進行，主要用來確認渲染狀態。要進行快照測試需要額外引入可以模擬 DOM 架構以及模擬 vue 元件渲染的套件，這邊我是使用 *jsdom* 搭配 *vue utlis tests* 來實現測試。
 
 ```js
 //vite.config.js
@@ -161,8 +154,91 @@ export default {
 	}
 }
 ```
-
 #### 畫面載入顯示與狀態綁定
+
+網站有載入效果（如下圖），等待 API 資料回傳才顯示畫面，載入樣式 `.skeleton` 添加與否是跟 `isLoading` 狀態綁定的，這個測試的目的是為了確認狀態與樣式確實綁定。
+
+![](/img/refactor-vue/loading.png)
+
+在這個測試案例，我是使用 `shallowMount` 進行元件渲染，因為我的目標是 Card 元件根層架構是否會根據狀態顯示對應樣式，不需要連同子層架構完整渲染，以下是我寫的配置。
+
+```js
+import Card from "@/components/Card.vue"
+
+
+//mock Card 元件
+const wrapper = shallowMount(Card, {
+      props: { activitiesData },
+      global: {
+        mocks: {
+          $store: mockStore, // 模擬 Vuex
+        },
+        stubs: {
+          'router-link': true, // 模擬 router-link
+        },
+      },
+    });
+```
+我設計的測試案例分別是 當 `isLoading` 為 `true` 時，元件架構應包含 `skeleton` 樣式，反之則否。
+
+```js
+import { shallowMount } from '@vue/test-utils';
+import { describe, it, expect } from 'vitest';
+import Card from '@/components/Card.vue';
+
+describe('Card.vue', () => {
+  
+  // 模擬類似真實 api 回傳的假資料
+  const activitiesData = {
+    StartTime: '2024-11-28T12:00:00Z',
+    EndTime: '2024-11-29T12:00:00Z',
+    City: 'Taipei',
+    ActivityID: '12345',
+    ActivityName: 'Sample Activity',
+    Picture: { PictureUrl1: 'https://example.com/sample.jpg' },
+  };
+
+  // 模擬的 vuex
+  const mockStore = {
+    state: {
+      isLoading: false,
+    },
+  };
+
+  it('renders correctly when not loading', () => {
+    const wrapper = shallowMount(Card, {
+      props: { activitiesData },
+      global: {
+        mocks: {
+          $store: mockStore, // 模擬 Vuex
+        },
+        stubs: {
+          'router-link': true, // 模擬 router-link
+        },
+      },
+    });
+
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it('renders skeleton class when loading', () => {
+    mockStore.state.isLoading = true; // 模擬 isLoading 狀態
+    const wrapper = shallowMount(Card, {
+      props: { activitiesData },
+      global: {
+        mocks: {
+          $store: mockStore,
+        },
+        stubs: {
+          'router-link': true,
+        },
+      },
+    });
+
+    expect(wrapper.find('.skeleton').exists()).toBe(true); // 檢查 skeleton class 是否存在
+  });
+});
+```
 
 ### 整合測試
 
