@@ -1,4 +1,4 @@
-# Redux 機制初探
+# Redux - 機制初探
 
 
 ### store 
@@ -79,10 +79,19 @@ function pushToArray(arr, value) {
 1. UI 介面上呼叫 `dispatch`
 2. `dispatch` 會攜帶 `action` 告知 Store 
 3. redux 會帶著 `action` 給 reducer
+4. 觸發 middleware 操作，如發出請求取得 API 等非同步行為（非同步操作時）
 4. reducer 根據 `action` 內容決定要如何更新狀態
 5. 更新完成狀態後，重新觸發 UI 改變
 
+> 同步操作流程圖
+
+
 ![](/img/redux/redux-dataflow.png)
+
+> 非同步操作流程圖
+
+![](/img/redux/redux-async.png)
+
 
 所謂的單向資料流指的就是 **資料只能按照單一方向流程改變**，也就是你沒辦法跳過、或是反方向來改變資料，例如：跳過呼叫 `dispatch` 直接修改 state。
 
@@ -95,4 +104,5 @@ function pushToArray(arr, value) {
 
 #### 缺點
 
-1. 學習曲線高
+1. 學習曲線高，專案引入成本也高。
+
