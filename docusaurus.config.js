@@ -15,7 +15,7 @@ const config = {
   favicon: "img/andy-walking-logo.png", 
 
   // Set the production url of your site here
-  url: "https://www.andy-walking.dev/",
+  url: "https://andywalking.tw/",
   baseUrl: "/",
 
   // GitHub pages deployment config.
@@ -75,17 +75,17 @@ const config = {
             type: "docSidebar",
             sidebarId: "techNoteSidebar",
             position: "left",
-            label: "Tech Notes",
+            label: "筆記",
           },
           {
             href: "https://github.com/southAndy",
             label: "GitHub",
-            position: "right",
+            position: "left",
           },
           {
             href:'https://www.linkedin.com/in/yi-yang-t-2124491a2/',
-            label:'Linkedin',
-            position:'right'
+            label:'LinkedIn',
+            position:'left'
           }
         ],
       },
