@@ -12,7 +12,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Andy Walking",
   // tagline: "Dinosaurs are cool",
-  favicon: "img/andy-walking-logo.svg", 
+  favicon: "img/andy-walking-logo.png", 
 
   // Set the production url of your site here
   url: "https://www.andy-walking.dev/",
