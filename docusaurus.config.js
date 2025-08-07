@@ -19,7 +19,6 @@ const config = {
   baseUrl: "/",
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: "southAndy", // Usually your GitHub org/user name.
   projectName: "note", // Usually your repo name.
   deploymentBranch:'gh-pages',
@@ -46,7 +45,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: "./sidebars.js",
+          sidebarPath: "./sidebars.js", //manual sidebar config
           
         },
         blog: {
@@ -62,14 +61,8 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      // image: "img/andy-walking-logo.svg",
       navbar: {
         title: "Andy Walking",
-        // logo: {
-        //   alt: "My Site Logo",
-        //   src: "img/andy-walking-logo.svg",
-        // },
         items: [
           {
             type: "docSidebar",
