@@ -38,29 +38,29 @@ h1{
   font-weight: 500;
 }
 h2{
-  font-size: 1.4rem;
+  font-size: 1.75rem;
 
 }
 
 h3{
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 h4{
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 /* 內文 */
 p,li{
-  font-size: 15px;
+  font-size: 16px;
   line-height: 2;
   
 }
 
 blockquote{
-  font-size: 10px;
+  font-size: 14px;
 }
 
 
 code {
-  color:#49C6E5;
+  color:#25c2a0;
   font-size: 14px !important;
 }
