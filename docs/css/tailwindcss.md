@@ -1,4 +1,9 @@
-#tailwindcss
+---
+title: Tailwind CSS 入門指南
+description: Tailwind CSS 的安裝與配置教學，包含與 PostCSS 整合、配置文件設定、基本用法介紹以及常用樣式類別的使用方式
+---
+
+# Tailwind CSS
 
 ### 新增 tailwindcss 至專案內
 

@@ -1,3 +1,8 @@
+---
+title: JavaScript 變數宣告比較：var、let、const
+description: 詳細比較 var、let、const 三種變數宣告方式的差異，包含作用域、hoisting 機制、暫時性死區（TDZ）以及最佳實踐建議
+---
+
 # [JS] 比較 var, let, const
 
 :::tip

@@ -1,3 +1,8 @@
+---
+title: Vue 專案重構實戰筆記
+description: 完整的 Vue 專案重構經驗分享，包含重構動機、測試策略（單元測試、快照測試、整合測試）、Option API 轉 Composition API 的過程與心得
+---
+
 # [筆記] 重構 vue project 
 
 ## 為何要重構？

@@ -1,3 +1,8 @@
+---
+title: React 元件渲染生命週期
+description: React 元件的完整渲染機制，包含 Mount、Update、Unmount 三個生命週期的詳細流程，trigger phase、render phase、commit phase 的運作原理
+---
+
 # React - 畫面渲染機制
 
 

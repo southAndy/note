@@ -1,3 +1,8 @@
+---
+title: Vue 3 核心概念與關鍵字
+description: Vue 3 重要概念的詳細介紹，包含 computed vs methods 比較、writable computed、v-bind 用法、watch 與 watchEffect 的差異及適用情境
+---
+
 # [Vue] keywords
 
 :::info

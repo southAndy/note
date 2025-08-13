@@ -1,3 +1,8 @@
+---
+title: JavaScript 作用域機制
+description: JavaScript 作用域的基本概念，包含全域作用域、函數作用域、區塊作用域的差異，以及作用域鏈的運作機制
+---
+
 # [JS] Scoped
 
 在 JavaScript 中，有三種 Scope：

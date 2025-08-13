@@ -1,3 +1,8 @@
+---
+title: HTTP Request 完整解析
+description: HTTP 請求的基本概念與架構解析，包含 Client-Server 模型、HTTP 方法、請求結構（start-line、headers、body）以及常見的請求目的
+---
+
 # HTTP Request
 
 ## 認識 HTTP Request

@@ -1,3 +1,8 @@
+---
+title: JavaScript Promise 詳解
+description: Promise 物件的完整教學，包含基本創建方法、狀態管理、then/catch 使用、Promise 組合方法（all、race、any、allSettled）以及與 async/await 的比較
+---
+
 # [JS] Promise
 
 ### Promise 基本介紹

@@ -61,6 +61,8 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // HTML meta tags
+      metadata: [{name: 'algolia-site-verification', content: 'AAA36DD65030FABA'}],
       image: 'img/andy-walking-logo.png', // Default social card image
       navbar: {
         title: "Andy Walking",
@@ -91,6 +93,14 @@ const config = {
       prism: {
         theme: prismThemes.duotoneLight, // lightTheme's setting
         darkTheme: prismThemes.duotoneDark, // darkTheme's setting
+      },
+      algolia: {
+        appId: 'F9787KWW5D',
+        apiKey: '65093066f6cb6464eb8528ce4d0802a1',
+        indexName: 'andywalking-blog',
+        contextualSearch: true,
+        searchParameters: {},
+        searchPagePath: 'search',
       },
       editCurrentVersion:false
     }),

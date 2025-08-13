@@ -1,3 +1,8 @@
+---
+title: React useState Hook 深入解析
+description: React useState 的完整教學，包含狀態管理的必要性、使用限制、immutable 原則、狀態更新機制、batch update 以及 updater function 的應用
+---
+
 # useState
 
 ## 為何需要 state 

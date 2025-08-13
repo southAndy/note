@@ -1,3 +1,8 @@
+---
+title: Claude Code 原生安裝 vs NPM 全域安裝
+description: 解析為何 Claude Code 官方推薦原生安裝方式，比較 NPM 全域下載機制的優缺點，以及原生安裝如何解決版本耦合問題
+---
+
 # 為何 Claude 官方推薦以原生方式安裝？ 
 
 

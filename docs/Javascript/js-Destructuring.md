@@ -1,3 +1,8 @@
+---
+title: JavaScript 解構賦值
+description: ES6 解構賦值的完整教學，包含陣列解構、物件解構的各種用法、預設值設定、重新命名、以及在 React 中的實際應用案例
+---
+
 # [JS] Destructuring
 ### 前言
 
