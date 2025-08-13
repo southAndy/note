@@ -30,6 +30,7 @@ const sidebars = {
             'react/Redux-basic',
             'react/styled',
             'react/render-strategy',
+            'react/tanstack-virtual',
           ]
         },
         {
