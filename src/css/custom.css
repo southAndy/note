@@ -6,7 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #49C6E5;
+  --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -57,6 +57,11 @@ p,li{
 
 blockquote{
   font-size: 14px;
+}
+
+strong{
+  color: #25c2a0;
+  font-weight: 600;
 }
 
 
