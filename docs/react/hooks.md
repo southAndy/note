@@ -3,7 +3,7 @@
 
 ## useState
 
-請參考 [useState](/docs/React/useState)
+請參考 [useState](/docs/react/useState)
 
 ## useEffect
 

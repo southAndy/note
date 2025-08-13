@@ -13,9 +13,9 @@
 
 我會附上重構前後程式碼進行比對，在重構的過程若有遇到值得複習、不清楚的概念會記錄下來，以下是主要步驟：
 
-1. [圖解架構及各個架構的功能](/docs/Vue/refactor#圖解專案架構)
-2. [更新專案打包工具 webpack -> vite](/docs/Vue/clitovite)
-3. [為重要功能加入測試 (Vitest)](/docs/Vue/refactor#測試方法)
+1. [圖解架構及各個架構的功能](/docs/vue/refactor#圖解專案架構)
+2. [更新專案打包工具 webpack -> vite](/docs/vue/clitovite)
+3. [為重要功能加入測試 (Vitest)](/docs/vue/refactor#測試方法)
 4. 以頁面為單位去針對程式碼進行重構（並且記錄下程式碼重構的原因）
 5. 以 Typescript 進行編寫
 
