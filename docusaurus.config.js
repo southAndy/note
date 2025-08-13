@@ -61,6 +61,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/andy-walking-logo.png', // Default social card image
       navbar: {
         title: "Andy Walking",
         items: [

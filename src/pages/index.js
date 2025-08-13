@@ -22,7 +22,9 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      description="Description will go into a meta tag in <head />"
+      title={`${siteConfig.title} - 前端工程師筆記`}
+      description="Andy的前端工程師技術筆記，包含React、Vue、JavaScript等前端開發經驗分享"
+      image="img/andy-walking-logo.png"
     >
       <HomepageHeader />
       <main>
