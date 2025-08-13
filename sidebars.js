@@ -64,6 +64,14 @@ const sidebars = {
         }
       ]
     },
+    {
+      type: 'category',
+      label: '💻 開發工具',
+      collapsed: true,
+      items: [
+        'tool/claudeInstall',
+      ],
+    }
     // {
     //   type: 'category',
     //   label: '🧠 思考中 ... ',
