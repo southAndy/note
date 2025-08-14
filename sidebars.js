@@ -60,7 +60,6 @@ const sidebars = {
           items: [
             'Webpack/手動打包vue專案認識webpack配置',
             'npm/package-lock.json 的功能',
-            'docker/常用指令'
           ]
         }
       ]
@@ -71,6 +70,7 @@ const sidebars = {
       collapsed: true,
       items: [
         'tool/claudeInstall',
+        'docker/常用指令',
       ],
     }
     // {
