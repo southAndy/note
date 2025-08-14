@@ -56,6 +56,14 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'TypeScript',
+          items: [
+            'Typescript/interface-vs-type',
+            'Typescript/generics'
+          ]
+        },
+        {
+          type: 'category',
           label: '工具鏈配置',
           items: [
             'Webpack/手動打包vue專案認識webpack配置',
