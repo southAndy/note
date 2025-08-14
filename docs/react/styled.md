@@ -1,4 +1,3 @@
-
 ---
 title: Styled-Components 完整使用指南
 description: Styled-Components 的功能特色與使用方法，包含基本語法、props 應用、樣式繼承、效能優化以及專案架構設計的最佳實踐
@@ -115,9 +114,9 @@ const WrapperPage = ({props})=>{
 
 ### 搭配 Babel
 
- 1. 更具可讀性的類名
- 2. 伺服器端渲染 (SSR) 支持
- 3. 去除未使用的樣式( 更小的打包體積)
+ 1. 更具可讀性的類名
+ 2. 伺服器端渲染 (SSR) 支持
+ 3. 去除未使用的樣式( 更小的打包體積)
 
 
 
@@ -141,20 +140,20 @@ const StyledSample = styled.div`
 
 ```
 src/
-  └── styles/
-      ├── base/
-      │   ├── BaseButton.js
-      │   ├── BaseContainer.js
-      │   ├── BaseInput.js
-      │   └── index.js
-      ├── theme/
-      │   ├── theme.js
-      │   └── GlobalStyle.js
-      ├── utils/
-      │   ├── flexCenter.js
-      │   ├── typography.js
-      │   └── index.js
-      └── index.js
+  └── styles/
+      ├── base/
+      │   ├── BaseButton.js
+      │   ├── BaseContainer.js
+      │   ├── BaseInput.js
+      │   └── index.js
+      ├── theme/
+      │   ├── theme.js
+      │   └── GlobalStyle.js
+      ├── utils/
+      │   ├── flexCenter.js
+      │   ├── typography.js
+      │   └── index.js
+      └── index.js
 ```
 
 ###  base/資料夾
@@ -166,18 +165,18 @@ src/
 ```js
 //theme.js
 export const theme = {
-  colors: {
-    primary: '#007BFF',
-    secondary: '#6C757D',
-    background: '#F8F9FA',
-    text: '#212529',
-  },
-  spacing: {
-    small: '8px',
-    medium: '16px',
-    large: '24px',
-  },
-  borderRadius: '4px',
+  colors: {
+    primary: '#007BFF',
+    secondary: '#6C757D',
+    background: '#F8F9FA',
+    text: '#212529',
+  },
+  spacing: {
+    small: '8px',
+    medium: '16px',
+    large: '24px',
+  },
+  borderRadius: '4px',
 };
 ```
 
