@@ -2,7 +2,7 @@
   "promptDelete": false,
   "newFileLocation": "folder",
   "newFileFolderPath": "docs/drafts",
-  "attachmentFolderPath": "static/img",
+  "attachmentFolderPath": "static",
   "userIgnoreFilters": [
     "build/",
     "src/",
@@ -10,5 +10,6 @@
     "node_modules/",
     "public/"
   ],
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative"
 }

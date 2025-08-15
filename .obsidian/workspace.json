@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/drafts/實現 Obsidian 筆記即 Docusaurus 文章功能.md",
-                "mode": "source",
+                "file": "docs/published/thinking/超簡單實現 Obsidian 筆記即 Docusaurus 文章功能.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "實現 Obsidian 筆記即 Docusaurus 文章功能"
+              "title": "超簡單實現 Obsidian 筆記即 Docusaurus 文章功能"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/drafts/實現 Obsidian 筆記即 Docusaurus 文章功能.md",
+                "file": "docs/published/thinking/超簡單實現 Obsidian 筆記即 Docusaurus 文章功能.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 實現 Obsidian 筆記即 Docusaurus 文章功能"
+              "title": "Outline of 超簡單實現 Obsidian 筆記即 Docusaurus 文章功能"
             }
           },
           {
@@ -182,28 +182,38 @@
   },
   "active": "2ba311c9b4e71417",
   "lastOpenFiles": [
-    "docs/drafts/().md",
-    "docs/drafts/實現 Obsidian 筆記即 Docusaurus 文章功能.md",
+    "static/img-2025-08-15-180823.png",
+    "docs/published/thinking/超簡單實現 Obsidian 筆記即 Docusaurus 文章功能.md",
+    "static/img-2025-08-15-173739.png",
+    "static/img-2025-08-15-173315.png",
+    "static/img-2025-08-15-171500.png",
+    "Pasted.md",
+    "docs/drafts/一些後端開發的快速筆記.md",
+    "docs/published/thinking/op實現 Obsidian 筆記即 Docusaurus 文章功能.md",
+    "static/img-2025-08-15-170912.png",
+    "static/Pasted image 20250815165854.png",
+    "static/img/Pasted image 20250815164746.png",
+    "static/img",
     "build/sitemap.xml",
     "build/opensearch.xml",
     "build/index.html",
+    "build/404.html",
     "build/docs/webpack/手動打包vue專案認識webpack配置/index.html",
-    "build/docs/webpack/手動打包vue專案認識webpack配置",
-    "build/docs/webpack",
     "build/docs/vue/refactor/index.html",
     "build/docs/vue/clitovite/index.html",
     "build/docs/vue/Keywords/index.html",
-    "build/docs/vue/refactor",
-    "build/virtual_scroll_render.gif",
-    "build/npm-nvm-global-diagram-en.png",
-    "build/image (2).png",
-    "build/virtual_scroll.gif",
-    "build/image (2) 1.png",
-    "build/testing.png",
-    "build/Pasted image 20250808181405.png",
-    "build/Pasted image 20250811160010.png",
-    "build/img/react/tanstack-virtual/project.png",
-    "build/img/react/tanstack-virtual/bundle.png",
+    "build/docs/typescript/interface-vs-type/index.html",
+    "build/react/tanstack-virtual/virtual_scroll_render.gif",
+    "build/react/tanstack-virtual/project.png",
+    "build/react/tanstack-virtual/bundle.png",
+    "build/react/tanstack-virtual/before.png",
+    "docs/published/test-obsidian-img.md",
+    "docs/published/react/useState-test/index.md",
+    "docs/drafts/zsh vs bash.md",
+    "docs/drafts/實現 Obsidian 筆記即 Docusaurus 文章功能.md",
+    "docs/drafts/op實現 Obsidian 筆記即 Docusaurus 文章功能.md",
+    "docs/published/test-automation.md",
+    "docs/drafts/().md",
     "docs/published/webpack/手動打包vue專案認識webpack配置.md",
     "docs/published/typescript/generics.md",
     "docs/published/typescript/interface-vs-type.md",
@@ -217,16 +227,6 @@
     "docs/published/react/Redux-basic.md",
     "docs/published/javascript/前端模組化.md",
     "docs/published/javascript/variable-declare.md",
-    "docs/published/javascript/scoped.md",
-    "docs/published/javascript/promise.md",
-    "docs/published/javascript/js-Destructuring.md",
-    "docs/published/javascript/[js]eventloop.md",
-    "docs/published/javascript/Express筆記.md",
-    "docs/drafts/zsh vs bash.md",
-    "docs/published/tool/TCP, IP.md",
-    "docs/published/tool/TCPIP.md",
-    "docs/drafts/TCPIP.md",
-    "docs/drafts/一些後端開發的快速筆記.md",
-    "docs/drafts/反思 AI 對前端職涯的影響.md"
+    "docs/published/javascript/scoped.md"
   ]
 }
