@@ -1,1 +1,14 @@
-{}
+{
+  "promptDelete": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "docs/drafts",
+  "attachmentFolderPath": "static/img",
+  "userIgnoreFilters": [
+    "build/",
+    "src/",
+    "static/",
+    "node_modules/",
+    "public/"
+  ],
+  "useMarkdownLinks": true
+}

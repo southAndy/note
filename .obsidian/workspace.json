@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f2a7125df86c9965",
+        "id": "9b0bfa17f35d3f69",
         "type": "tabs",
         "children": [
           {
-            "id": "2bcd9ca20cd2ee0a",
+            "id": "2ba311c9b4e71417",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/css/tailwindcss.md",
+                "file": "docs/drafts/實現 Obsidian 筆記即 Docusaurus 文章功能.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tailwindcss"
+              "title": "實現 Obsidian 筆記即 Docusaurus 文章功能"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 371.5,
+    "collapsed": true
   },
   "right": {
     "id": "771506bc2e7846bf",
@@ -94,6 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "node_modules/@algolia/autocomplete-core/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -140,15 +142,27 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "docs/drafts/實現 Obsidian 筆記即 Docusaurus 文章功能.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 實現 Obsidian 筆記即 Docusaurus 文章功能"
+            }
+          },
+          {
+            "id": "557f4252b3daa3f6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -166,10 +180,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2bcd9ca20cd2ee0a",
+  "active": "2ba311c9b4e71417",
   "lastOpenFiles": [
-    "cool.md",
-    "docs/css/tailwindcss.md",
-    "docs/css/預處理器與後處理器.md"
+    "docs/drafts/().md",
+    "docs/drafts/實現 Obsidian 筆記即 Docusaurus 文章功能.md",
+    "build/sitemap.xml",
+    "build/opensearch.xml",
+    "build/index.html",
+    "build/docs/webpack/手動打包vue專案認識webpack配置/index.html",
+    "build/docs/webpack/手動打包vue專案認識webpack配置",
+    "build/docs/webpack",
+    "build/docs/vue/refactor/index.html",
+    "build/docs/vue/clitovite/index.html",
+    "build/docs/vue/Keywords/index.html",
+    "build/docs/vue/refactor",
+    "build/virtual_scroll_render.gif",
+    "build/npm-nvm-global-diagram-en.png",
+    "build/image (2).png",
+    "build/virtual_scroll.gif",
+    "build/image (2) 1.png",
+    "build/testing.png",
+    "build/Pasted image 20250808181405.png",
+    "build/Pasted image 20250811160010.png",
+    "build/img/react/tanstack-virtual/project.png",
+    "build/img/react/tanstack-virtual/bundle.png",
+    "docs/published/webpack/手動打包vue專案認識webpack配置.md",
+    "docs/published/typescript/generics.md",
+    "docs/published/typescript/interface-vs-type.md",
+    "docs/published/react/useState.md",
+    "docs/published/react/tanstack-virtual.md",
+    "docs/published/react/styled.md",
+    "docs/published/react/structure.md",
+    "docs/published/react/render-system.md",
+    "docs/published/react/render-strategy.md",
+    "docs/published/react/hooks.md",
+    "docs/published/react/Redux-basic.md",
+    "docs/published/javascript/前端模組化.md",
+    "docs/published/javascript/variable-declare.md",
+    "docs/published/javascript/scoped.md",
+    "docs/published/javascript/promise.md",
+    "docs/published/javascript/js-Destructuring.md",
+    "docs/published/javascript/[js]eventloop.md",
+    "docs/published/javascript/Express筆記.md",
+    "docs/drafts/zsh vs bash.md",
+    "docs/published/tool/TCP, IP.md",
+    "docs/published/tool/TCPIP.md",
+    "docs/drafts/TCPIP.md",
+    "docs/drafts/一些後端開發的快速筆記.md",
+    "docs/drafts/反思 AI 對前端職涯的影響.md"
   ]
 }
