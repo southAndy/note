@@ -45,6 +45,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: "docs/published", // 只打包 published 資料夾
           sidebarPath: "./sidebars.js", //manual sidebar config
           
         },
