@@ -1,0 +1,1 @@
+https://antfu.me/posts/why-not-prettier-zh
