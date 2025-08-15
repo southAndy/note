@@ -46,27 +46,27 @@ const sidebars = {
           type: 'category',
           label: 'JavaScript 奇奇怪怪',
           items: [
-            'Javascript/variable-declare',
-            'Javascript/scoped',
-            'Javascript/js-Destructuring',
-            'Javascript/promise',
-            'Javascript/[js]eventloop',
-            'Javascript/前端模組化'
+            'javascript/variable-declare',
+            'javascript/scoped',
+            'javascript/js-Destructuring',
+            'javascript/promise',
+            'javascript/[js]eventloop',
+            'javascript/前端模組化'
           ]
         },
         {
           type: 'category',
           label: 'TypeScript',
           items: [
-            'Typescript/interface-vs-type',
-            'Typescript/generics'
+            'typescript/interface-vs-type',
+            'typescript/generics'
           ]
         },
         {
           type: 'category',
           label: '工具鏈配置',
           items: [
-            'Webpack/手動打包vue專案認識webpack配置',
+            'webpack/手動打包vue專案認識webpack配置',
             'npm/package-lock.json 的功能',
           ]
         }
@@ -79,6 +79,7 @@ const sidebars = {
       items: [
         'tool/claudeInstall',
         'docker/常用指令',
+        'tool/TCPIP'
       ],
     }
     // {
