@@ -79,7 +79,8 @@ const sidebars = {
       items: [
         'tool/claudeInstall',
         'docker/常用指令',
-        'tool/TCPIP'
+        'tool/TCPIP',
+        'thinking/超簡單實現 Obsidian 筆記即 Docusaurus 文章功能'
       ],
     }
     // {

@@ -91,11 +91,11 @@ function pushToArray(arr, value) {
 > 同步操作流程圖
 
 
-![](/img/redux/redux-dataflow.png)
+![](/redux/redux-dataflow.png)
 
 > 非同步操作流程圖
 
-![](/img/redux/redux-async.png)
+![](/redux/redux-async.png)
 
 
 所謂的單向資料流指的就是 **資料只能按照單一方向流程改變**，也就是你沒辦法跳過、或是反方向來改變資料，例如：跳過呼叫 `dispatch` 直接修改 state。

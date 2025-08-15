@@ -77,7 +77,7 @@ const MyComponent = ()=>{
 
 經過爬文研究以及與 AI 討論，**會需要內層元素是為了讓瀏覽器能給正確長度的滾動條**，因為定高容器高度代表的是 **「使用者可視域」** 的尺寸，內層元素則是根據所有列表的總高（如下圖），為了能正確滾動並顯示所有虛擬化內容，內層元素是必要的架構。
 
-<img src="/img/react/tanstack-virtual/virtual_scroll_render.gif" style={{height: "50vh",width:"auto"}} />
+<img src="/react/tanstack-virtual/virtual_scroll_render.gif" style={{height: "50vh",width:"auto"}} />
 
 > 圖片繪製 by ChatGPT
 
@@ -98,13 +98,13 @@ const MyComponent = ()=>{
 
 實作完成！**但上述的實作只能實現 「單欄」虛擬化列表**，所以呈現結果如下：
 
-![](/img/react/tanstack-virtual/before.png)
+![](/react/tanstack-virtual/before.png)
 
 
 
 但是實際上，列表通常不會以單行列呈現，以我個人專案的網站為例，在桌機尺寸下就是以 Grid 方式排版，每行有四個內容。
 
-![](/img/react/tanstack-virtual/project.png)
+![](/react/tanstack-virtual/project.png)
 
 
 還記得 tanstack 具有「**可客製化樣式**」的特性嗎？所以我就稍微根據樣式需求進行調整
@@ -167,7 +167,7 @@ const MyComponent = ()=>{
 #### Bundle 影響
 
 
-![](/img/react/tanstack-virtual/bundle.png)
+![](/react/tanstack-virtual/bundle.png)
 
 實際運行打包指令比較套件安裝前後的打包體積
 

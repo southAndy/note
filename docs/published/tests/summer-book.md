@@ -15,7 +15,7 @@ description: 前端測試的完整學習筆記，包含四種測試類型（UI�
 3. Integration Tests
 4. Unit Tests
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNVMz7lonY17EZnE25M69CiuC-tGYL-BjI_5WWw5e9JRU9iskZ-G677Idyo_MaRUvVexyglwBgId_NTDzjQ0c2sS2QKlrKVQFSNQ4tBToMpukWhpFkVbbZ0zhPB5xQ8nv7L02xey5bglq2TbFxa2A73llWphH0xwg-WEnlZiCeQZUuCAe4wgDZhhV0aw/s1600/testing.png)
+![](https://blogger.googleusercontent.com/b/R29vZ2xl/AVvXsEiNVMz7lonY17EZnE25M69CiuC-tGYL-BjI_5WWw5e9JRU9iskZ-G677Idyo_MaRUvVexyglwBgId_NTDzjQ0c2sS2QKlrKVQFSNQ4tBToMpukWhpFkVbbZ0zhPB5xQ8nv7L02xey5bglq2TbFxa2A73llWphH0xwg-WEnlZiCeQZUuCAe4wgDZhhV0aw/s1600/testing.png)
 
 > 圖片來源：https://www.simform.com/blog/microservice-testing-strategies/
 

@@ -37,7 +37,7 @@ npx webpack
 ```
 迎來第一個錯誤（如下圖）
 
-![](/img/webpack/webpack-entry.png)
+![](/webpack/webpack-entry.png)
 
 這邊可以簡單區分有一個 warn, error 層級的訊息，先說 warn 的部分：
 
@@ -64,7 +64,7 @@ module.exports = {
 ```
 重新執行打包，接著再次出現報錯
 
-![](/img/webpack/webpack-loader.png)
+![](/webpack/webpack-loader.png)
 
 仔細檢視訊息，這次的問題是出在打包 `App.vue` ，原因是 webpack 本身只具備編譯打包 js 功能，並不知道如何編譯 `.vue` 檔案，或是其餘像是 css,assets內的內容。這時候就是 webpack 另一個重要配置 `loader` 的使用時機，它的功能就是：設定打包檔案符合條件時要被怎麼處理，vue 官方提供 vue-loader 掃描 `.vue` 檔案(SFC)。
 
@@ -84,7 +84,7 @@ module.exports = {
 ```
 但這樣還是無法成功編譯，因為 `.vue` 檔案內有三個區域定義不同內容，若是全部都使用相同 loader 處理肯定會出錯。根據 vue-loader 文件內容，這個問題可透過在 webpack 的 `plugins` 配置中加入 `VueLoaderPlugin`，它的功能就是告訴 webpack 不同區域使用哪個 loader（如下圖）
 
-![](/img/webpack/webpack-plugins.png)
+![](/webpack/webpack-plugins.png)
 
 
 

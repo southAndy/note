@@ -163,7 +163,7 @@ export default {
 
 網站有載入效果（如下圖），等待 API 資料回傳才顯示畫面，載入樣式 `.skeleton` 添加與否是跟 `isLoading` 狀態綁定的，這個測試的目的是為了確認狀態與樣式確實綁定。
 
-![](/img/refactor-vue/loading.png)
+![](/refactor-vue/loading.png)
 
 在這個測試案例，我是使用 `shallowMount` 進行元件渲染，因為我的目標是 Card 元件根層架構是否會根據狀態顯示對應樣式，不需要連同子層架構完整渲染，以下是我寫的配置。
 
@@ -264,7 +264,7 @@ describe('Card.vue', () => {
 
 圖片說明的是專案架構、內部包含的元件以及元件概要的功能說明
 
-![](/img/refactor-vue/structure.png)
+![](/refactor-vue/structure.png)
 
 ### 是否全面改寫 compositionAPI?
 

@@ -62,7 +62,7 @@ renderScreen();
 
 React 雖然維持 **一律重繪** 作為渲染策略，但了解不必要重繪 DOM 的效能消耗，所以**它在渲染 virtual DOM 的過程加入比對機制 ，會根據新的資料去產生全新的 virtual DOM 架構，並將新舊版的 virtual DOM 進行比對**，比對出差異後執行真實的 DOM 渲染。
 
-![](/img/react/strategy.png)
+![](/react/strategy.png)
 
 > 圖片製作參考：
 > React 思維進化：一次打破常見的觀念誤解，躍升專業前端開發者（iThome鐵人賽系列書）

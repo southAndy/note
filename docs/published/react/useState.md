@@ -152,7 +152,7 @@ setObj({...obj,interest:newInterest})
 
 陣列如同物件是 mutable 的，且許多內建的陣列方法會修改原始陣列造成 mutable ，這邊我擷取了 react 官方文件內條列的比較表（如下），透過這張表可以快速知道，要避免直接使用哪些方法更新 state 。
 
-![](/img/usestate/array.png)
+![](/usestate/array.png)
 
 > 圖片來源：https://react.dev/learn/updating-arrays-in-state
 

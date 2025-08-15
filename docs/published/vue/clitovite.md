@@ -162,7 +162,7 @@ scss: {api: 'modern', // 指定使用 Modern API
 
 將專案內剩餘以 `require` 方式引入的內容，以 `import` 方式引入。
 
-![](/img/cli/cli.png)
+![](/cli/cli.png)
 
 大功告成！不過現在回首來看當初做的作品真是小巧，非常適合練習呢。
 

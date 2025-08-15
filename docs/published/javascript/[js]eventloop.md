@@ -32,7 +32,7 @@ console.log("3");
 3. 佇列 (callback queue)：最概略的說法就是：存放非同步的執行內容放置
 4. Web-API：執行環境（瀏覽器）提供的各種方法
 
-![](/img/eventloop/eventloop.png)
+![](/eventloop/eventloop.png)
 
 > 圖片來源：https://subhra.hashnode.dev/all-about-javascript-event-loop
 
@@ -49,7 +49,7 @@ console.log("3");
 
 舉例來說，以下程式碼，圖解執行流程如下
 
-![](/img/eventloop/eventloop-work-easy.png)
+![](/eventloop/eventloop-work-easy.png)
 
 ### 細探 callback queue 
 

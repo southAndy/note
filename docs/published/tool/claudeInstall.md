@@ -30,11 +30,11 @@ npm install -g @anthropic-ai/claude-code
 
 為了驗證這個機制，我在 v18.20.4 (預設 Node 版本)以全域方式安裝 Typescript 後，切換到 v20.x 後會發現這個套件不存在
 
-![](/img/claudeinstall/ts.png)
+![](/claudeinstall/ts.png)
 
 因為這個套件的安裝路徑是在 v18.20.4 下底下，以圖示來解釋這個概念就是如下圖
 
-![](/img/claudeinstall/npm-nvm-global-diagram-en.png)
+![](/claudeinstall/npm-nvm-global-diagram-en.png)
 
 > 圖片繪製 by GPT
 
