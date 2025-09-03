@@ -80,7 +80,8 @@ const sidebars = {
         'tool/claudeInstall',
         'docker/常用指令',
         'tool/TCPIP',
-        'thinking/超簡單實現 Obsidian 筆記即 Docusaurus 文章功能'
+        'thinking/超簡單實現 Obsidian 筆記即 Docusaurus 文章功能',
+        'tool/git merge vs git rebase'
       ],
     }
     // {
