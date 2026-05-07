@@ -12,7 +12,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Andy Walking",
   // tagline: "Dinosaurs are cool",
-  favicon: "img/andy-walking-logo.png", 
+  favicon: "andy-walking-logo.png",
 
   // Set the production url of your site here
   url: "https://andywalking.tw/",
@@ -64,7 +64,7 @@ const config = {
     ({
       // HTML meta tags
       metadata: [{name: 'algolia-site-verification', content: 'AAA36DD65030FABA'}],
-      image: 'img/andy-walking-logo.png', // Default social card image
+      image: 'andy-walking-logo.png', // Default social card image
       navbar: {
         title: "Andy Walking",
         items: [
