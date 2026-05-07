@@ -18,3 +18,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Use pnpm only — avoid alternate lockfiles
+package-lock.json
+yarn.lock
+
+# Claude Code local settings
+.claude/settings.local.json

@@ -1,0 +1,18 @@
+version: 2
+updates:
+  # 套件依賴升級（npm ecosystem 涵蓋 pnpm/yarn lock）
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "build(deps)"
+
+  # GitHub Actions workflow 版本升級
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "ci"

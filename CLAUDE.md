@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal tech documentation website built with Docusaurus 3.4.0. The site serves as Andy's frontend engineering notes and portfolio, featuring technical documentation organized by topics (React, Vue, JavaScript, CSS, etc.) and a personal introduction page.
+This is a personal tech documentation website built with Docusaurus 3.9.1. The site serves as Andy's frontend engineering notes and portfolio, featuring technical documentation organized by topics (React, Vue, JavaScript, TypeScript, etc.) and a personal introduction page.
 
 ## Development Commands
 
@@ -78,8 +78,9 @@ Documentation files are markdown-based and organized by topic in the `docs/` dir
 
 - **學習拼圖** (Learning Components) - Main technical documentation
   - React 生態系 (React Ecosystem)
-  - Vue 生態系 (Vue Ecosystem) 
+  - Vue 生態系 (Vue Ecosystem)
   - JavaScript 奇奇怪怪 (JavaScript Quirks)
+  - TypeScript
   - 工具鏈配置 (Toolchain Configuration)
 - **開發工具** (Development Tools) - Tool-focused documentation
 
