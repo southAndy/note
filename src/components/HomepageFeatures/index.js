@@ -13,7 +13,14 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className='container'>
         <div className={styles.container}>
-          <img src="/img/my-photo.png" className={styles.photo}/>
+          <img
+            src="/img/my-photo.png"
+            alt="Andy 曾翊洋"
+            width={180}
+            height={180}
+            loading="lazy"
+            className={styles.photo}
+          />
           <div className={styles.social}>
             <a href="https://github.com/southAndy" target="blank">
               <i class="fa-brands fa-github fa-lg"></i>
