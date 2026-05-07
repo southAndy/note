@@ -25,3 +25,6 @@ yarn.lock
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Obsidian app config (user-specific, not source content)
+.obsidian/
