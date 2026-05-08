@@ -29,10 +29,10 @@ const config = {
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
-  // i18n: {
-  //   defaultLocale: "zh-Hans",
-  //   locales: ["zh-Hans", "en"],
-  // },
+  i18n: {
+    defaultLocale: "zh-Hant",
+    locales: ["zh-Hant"],
+  },
   scripts:[
     {
       src:'https://kit.fontawesome.com/acf9539b1e.js'
@@ -47,7 +47,8 @@ const config = {
         docs: {
           path: "docs/published", // 只打包 published 資料夾
           sidebarPath: "./sidebars.js", //manual sidebar config
-          
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
         blog: {
           showReadingTime: true,
