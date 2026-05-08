@@ -1,6 +1,7 @@
 ---
-title: Pug 模板引擎基礎教學
+title: Pug 模板引擎基礎
 description: Pug 模板引擎的使用方法，包含基本語法、縮排規則、條件式渲染、mixin 功能，以及在 Express 專案中的整合應用
+draft: false
 ---
 
 :::info

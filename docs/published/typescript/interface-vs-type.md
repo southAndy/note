@@ -1,6 +1,7 @@
 ---
 title: Interface vs Type 使用時機與差異
 description: 深入比較 TypeScript 中 interface 和 type 的特性差異，包含繼承、宣告合併、聯合型別等使用情境，並提供實際程式碼範例說明何時使用哪種定義方式
+draft: false
 ---
 
 # Interface vs Type 使用時機與差異

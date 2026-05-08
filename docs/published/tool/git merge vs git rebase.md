@@ -3,6 +3,7 @@ title: 比較 merge , rebase 兩種合併方式
 description: 合併分支幾乎是團隊開發上，必定會用到的指令，尤其在現在常見的 scrum 開發流
 tags:
   - git
+draft: true
 ---
 最近久違地面試被問了這個經典的 Git 問題，發現自己沒有那麼熟悉，所以就來複習一下。
 

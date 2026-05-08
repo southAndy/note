@@ -1,6 +1,7 @@
 ---
 title: 瀏覽器同源政策（SOP）
 description: 同源政策（Same Origin Policy）的基本概念，包含 protocol、host、port 三個條件的判斷標準，以及同源與非同源的區別
+draft: false
 ---
 
 # 同源與非同源

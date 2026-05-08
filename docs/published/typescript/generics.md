@@ -1,6 +1,7 @@
 ---
 title: TypeScript 泛型基礎與工具型別
 description: 介紹 TypeScript 泛型的基本概念，包含與 any 的差異、多個泛型參數的定義方式，泛型約束的使用，以及常用的工具型別如 Partial、Required、Pick、Omit 等實用應用
+draft: false
 ---
 
 # TypeScript 泛型基礎與工具型別

@@ -1,3 +1,9 @@
+---
+title: TCP/IP
+description: 傳輸通訊協定 TCP/IP 的基本介紹
+draft: false
+---
+
 # internet 
 
 是所謂的傳輸通訊協定，確保資料傳遞的安全，TCP 會在兩個端點建立連線，每次連線雙方都要提供一個 port 作為識別（HTTP 預設的 PORT 為 80，HTTPS 預設 PORT 為 443），而一個 ip 位置下可以根據需求有多個 port

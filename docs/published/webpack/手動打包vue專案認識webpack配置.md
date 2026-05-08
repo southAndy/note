@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Webpack 4 手動打包 Vue 專案配置教學
 description: 透過手動配置 webpack.config.js 打包 Vue 專案的完整教學，包含 entry、loader、plugins 設定，以及 vue-loader 和相關工具的使用方式
 ---

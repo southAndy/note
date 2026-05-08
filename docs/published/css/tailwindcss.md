@@ -1,6 +1,7 @@
 ---
-title: Tailwind CSS 入門指南
+title: Tailwind CSS 學習筆記
 description: Tailwind CSS 的安裝與配置教學，包含與 PostCSS 整合、配置文件設定、基本用法介紹以及常用樣式類別的使用方式
+draft: false
 ---
 
 # Tailwind CSS

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: React 的渲染策略
 description: React 採用一律重繪策略的原理與優缺點，包含 Virtual DOM 比對機制如何優化效能，以及與傳統 DOM 操作的差異比較
 ---

@@ -1,6 +1,7 @@
 ---
 title: Vitest 測試框架使用指南
 description: Vitest 測試框架的完整教學，包含配置設定、test API 使用、expect 斷言方法、mock 功能以及各種測試模式的實際應用
+draft: false
 ---
 
 # [tools] Vitest

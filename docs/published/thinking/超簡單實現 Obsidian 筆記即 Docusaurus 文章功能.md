@@ -3,6 +3,7 @@ title: 超簡單實現 Obsidian 筆記即 Docusaurus 文章功能
 description: 工程師技術學不完，所以相信每個工程師都有不同的記錄方法，以我自己來說就是使用 Obsidian 做筆記，不定期的將所學內容更新到個人部落格上，一直以來我都是手動做這事....
 tags:
   - ai
+draft: true
 ---
 
 

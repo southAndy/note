@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Redux 狀態管理機制初探
 description: Redux 的核心概念與運作機制，包含 store、action、reducer 的功能介紹，純函式的重要性，以及單向資料流的優缺點分析
 ---
