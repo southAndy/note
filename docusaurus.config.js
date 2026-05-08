@@ -92,8 +92,8 @@ const config = {
       },
       // code block theme
       prism: {
-        theme: prismThemes.duotoneLight, // lightTheme's setting
-        darkTheme: prismThemes.duotoneDark, // darkTheme's setting
+        theme: prismThemes.nightOwlLight, // lightTheme's setting
+        darkTheme: prismThemes.nightOwl, // darkTheme's setting
       },
       algolia: {
         appId: 'F9787KWW5D',
