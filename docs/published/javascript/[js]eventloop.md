@@ -1,7 +1,7 @@
 ---
-draft: true
 title: JavaScript 事件循環機制
 description: 深入淺出解釋 JavaScript 的事件循環機制，包含同步與非同步概念、Call Stack、Callback Queue、Web API 運作流程，以及 microtask 和 macrotask 的差異
+draft: false
 ---
 
 # [JS] Event Loop

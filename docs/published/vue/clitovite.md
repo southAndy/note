@@ -1,7 +1,7 @@
 ---
-draft: true
 title: Vue 專案從 CLI 遷移到 Vite
 description: Vue CLI 專案遷移到 Vite 的完整實作過程，包含依賴移除、配置調整、Sass 兼容性處理以及模組引入方式的更新
+draft: true
 ---
 
 # Vue CLI to Vite

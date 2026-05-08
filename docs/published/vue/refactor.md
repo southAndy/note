@@ -1,7 +1,7 @@
 ---
-draft: true
 title: 從個人 Vue project 練習重構
 description: 完整的 Vue 專案重構經驗分享，包含重構動機、測試策略（單元測試、快照測試、整合測試）、Option API 轉 Composition API 的過程與心得
+draft: false
 ---
 
 閱讀完 explain this 的[重構文章](https://www.explainthis.io/zh-hant/swe/how-to-refactor)後，決定練習重構專案的原因：
