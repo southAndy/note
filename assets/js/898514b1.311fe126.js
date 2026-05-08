@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkblog=globalThis.webpackChunkblog||[]).push([[9067],{9187:a=>{a.exports=JSON.parse('{"tags":[{"label":"ai","permalink":"/docs/tags/ai","count":1},{"label":"git","permalink":"/docs/tags/git","count":1}]}')}}]);
