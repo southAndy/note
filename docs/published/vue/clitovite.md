@@ -1,14 +1,10 @@
 ---
 title: Vue 專案從 CLI 遷移到 Vite
 description: Vue CLI 專案遷移到 Vite 的完整實作過程，包含依賴移除、配置調整、Sass 兼容性處理以及模組引入方式的更新
-draft: true
+draft: false
 ---
 
 # Vue CLI to Vite
-
-
-
-
 
 Vue CLI 背後是使用 webpack 進行專案打包，在比較了 Vite 跟 webpack後，自己覺得此專案具備轉為 vite 打包的主要條件：
 
